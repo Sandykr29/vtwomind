@@ -1,0 +1,45 @@
+
+
+
+.breadcrumb-container {
+  margin-top: 100px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+
+.breadcrumb-trail {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border: 1px solid red;
+}
+
+.breadcrumb-trail div {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #007bff; 
+  
+}
+
+.breadcrumb-trail div:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-items{
+  border: 1px solid yellowgreen;
+}
+
+.breadcrumb-item {
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.selected-items {
+  margin-top: 20px;
+}

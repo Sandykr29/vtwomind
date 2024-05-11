@@ -1,0 +1,12 @@
+.App{
+   margin-left:10% ;
+   margin-right: 10%;margin-top: 10%;
+
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.App>h2{
+  margin: auto;
+  color: rgb(250, 37, 37);
+  text-decoration: underline;
+}
