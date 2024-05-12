@@ -2,13 +2,15 @@
 
 .btn{
     display:inline-block;
+    margin-top: 10px;
     margin-left:10px ;
     border-bottom: 2px;
+    color: #007bff;
 }
 
 .btn:hover{
     cursor: pointer;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid rgb(53, 36, 36);
     padding-bottom: 3px;
 }
 
@@ -23,12 +25,33 @@
 
 .container >div>label{
     padding-left: 5px;
+    color: rgb(75, 71, 71);
 }
 
 .bottom-div{
-    margin-top: 10px;
+    margin-top: 2px;
 }
 
 .bottom-div label{
     margin-left: 5px;
+}
+
+.warning-removal >p{
+    display: inline-block;
+}
+.warning-removal >button{
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.warning-removal >button:hover{
+background-color: rgb(129, 35, 35);
+color: white;
+}
+
+.warning-removal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

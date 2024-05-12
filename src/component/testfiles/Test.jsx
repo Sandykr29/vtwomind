@@ -4,7 +4,7 @@ import "./Test.css"
 
 export const Listing = ({ data }) => {
   const [newData, setNewData] = useState(data);
-  const [selected, setSelected] = useState(["home "]);
+  const [selected, setSelected] = useState(["home"]);
   const [chosen, setChosen] = useState([]);
   const [remove,setRemove]=useState([]);
 
@@ -70,10 +70,14 @@ export const Listing = ({ data }) => {
       <hr />
 
       <div className="chosen">
-   {remove.length>0 &&<button onClick={handleFilter}>Remove selected</button>}
-        <h3>Selected Items</h3>
+        {remove.length>0 && <div className="warning-removal">
+<p>Remove all selected items</p>
+<button onClick={handleFilter}>Remove selected</button>
+        </div>}
+   {/* {remove.length>0 &&<button onClick={handleFilter}>Remove selected</button>} */}
+        <h3>Selected Items↓</h3>
         {chosen?.map((item, index) => (
-          <div className="bottom-div" key={index}>
+          <div className="bottom-div" key={item}>
             <input  onChange={handlePlay} type="checkbox" value={item}  />
             <label>{item}</label>
             

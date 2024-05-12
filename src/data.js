@@ -2,7 +2,7 @@ export const data = {
     music: {
       hello: "Hello",
         'see you again': "See you again",
-      arijit: ["Tum Hi Ho", "Kya Chahiye", "Hai Dil Ye Mera", "Kya Chahiye", "Shayad"],
+      arijit: ["Tum Hi Ho", "Kya Chahiye", "Hai Dil Ye Mera", "Kesariya", "Shayad"],
       atif: ["Adat", "Wo Lamhe", "Tu Jane Na"]
     },
     documents: {
@@ -28,16 +28,3 @@ export const data = {
     }
   };
   
-
-
-
-
-
-
-
-
-// const data=[
-
-// "music":["hello","see you again",{arijit:["tum hi ho","kya chahiye","hai dil ye mera","kya chahiye","shayad"]},{atif:["adat","wo lamhe","tu jane na"]}]
-
-// ]

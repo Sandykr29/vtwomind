@@ -32,6 +32,8 @@ function App() {
   return (
     <div className="App">
      <h2>Breadcrum Assignment</h2>
+     <br/>
+     <hr/>
       <Listing data={data}/>
     </div>
   );
