@@ -62,8 +62,9 @@ export const Listing = ({ data }) => {
   };
 
 
-  // logic to reach file through breadcrumb
+  // logic to select file through main data div, this is passed to Render component
   const handleChange = (e, item) => {
+  
     if (e.target.checked) {
       setChosen((prevChosen) => [...prevChosen, item]);
     } else {

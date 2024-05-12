@@ -10,7 +10,7 @@ export const Render = ({ newData, handleClick, handleChange }) => {
         </div>
       )) : Object.keys(newData).map((item, _) => (
         <div key={item}>
-          <input type="checkbox" name="" id="" />
+          <input onChange={(e) => handleChange(e, item)} type="checkbox" name="" id="" />
           <label onChange={(e) => handleChange(e, item)} onClick={() => handleClick(item)} htmlFor="">{item}</label>
         </div>
       ))}
