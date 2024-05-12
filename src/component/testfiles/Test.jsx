@@ -3,16 +3,22 @@ import { Render } from "./Render";
 import "./Test.css"
 
 export const Listing = ({ data }) => {
+
+  // data which is being sent to Render component 
   const [newData, setNewData] = useState(data);
   const [selected, setSelected] = useState(["home"]);
   const [chosen, setChosen] = useState([]);
   const [remove,setRemove]=useState([]);
 
+
+// function to remove all the checked value from selected div(bottom div)
   const handleFilter=()=>{
     setChosen((prevChosen) => prevChosen.filter((item) => !remove.includes(item)))
     setRemove([]);
   }
 
+
+  // function to select  values that we want to delete from the lower-div
   const handlePlay = (e) => {
     const value = e.target.value;
     setRemove((prevRemove) => {
@@ -24,6 +30,7 @@ export const Listing = ({ data }) => {
     });
   };
 
+  // function to select values from main data div 
   const clickbutton = (index) => {
     const lastItem = selected[index];
     const newDataFromLastItem = getDataFromSelected(data, selected, index);
@@ -31,6 +38,8 @@ export const Listing = ({ data }) => {
     setSelected(selected.slice(0, index + 1));
   };
 
+
+  // function to make breadcurmb 
   const getDataFromSelected = (data, selected, index) => {
     let newData = data;
     for (let i = 1; i <= index; i++) {
@@ -40,6 +49,8 @@ export const Listing = ({ data }) => {
     return newData;
   };
 
+
+  // logic to check it selected data is an array or obj 
   const handleClick = (item) => {
     if (Array.isArray(newData[item])) {
       setNewData(newData[item]);
@@ -50,6 +61,8 @@ export const Listing = ({ data }) => {
     }
   };
 
+
+  // logic to reach file through breadcrumb
   const handleChange = (e, item) => {
     if (e.target.checked) {
       setChosen((prevChosen) => [...prevChosen, item]);
@@ -60,21 +73,29 @@ export const Listing = ({ data }) => {
 
   return (
     <div className="outer-div">
+
+      {/* breadcrumb section  */}
       {selected?.map((item, index) => (
         <div className="btn" key={item} onClick={() => clickbutton(index)}>
           {item}
         </div>
       ))}
       <br />
+
+      {/* main data rendering  */}
       <Render newData={newData} handleClick={handleClick} handleChange={handleChange} />
       <hr />
 
+      {/* selection div  */}
       <div className="chosen">
+
+        {/* logic to conditionally rendering the remove selected button  */}
         {remove.length>0 && <div className="warning-removal">
-<p>Remove all selected items</p>
-<button onClick={handleFilter}>Remove selected</button>
+       <p>Remove all selected items</p>
+        <button onClick={handleFilter}>Remove selected</button>
         </div>}
-   {/* {remove.length>0 &&<button onClick={handleFilter}>Remove selected</button>} */}
+
+        {/* showing list of items selected from the main div  */}
         <h3>Selected Items↓</h3>
         {chosen?.map((item, index) => (
           <div className="bottom-div" key={item}>
