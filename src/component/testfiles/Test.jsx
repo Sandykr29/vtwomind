@@ -101,7 +101,7 @@ export const Listing = ({ data }) => {
         {chosen?.map((item, index) => (
           <div className="bottom-div" key={item}>
             <label><input  onChange={handlePlay} type="checkbox" value={item}  />
-            {selected.join("/")}/{item}</label>        
+            <span>{selected.join("/")}/{item}</span></label>        
           </div>
         ))}
       </div> 

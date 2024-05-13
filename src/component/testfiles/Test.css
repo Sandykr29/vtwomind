@@ -25,9 +25,16 @@
 
 .bottom-div{
     margin-top: 2px;
+    display: flex;
+    align-items: center;
 }
 
 .bottom-div label{
+    display: flex;
+    align-items: center;
+}
+
+.bottom-div span{
     margin-left: 5px;
 }
 

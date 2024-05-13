@@ -29,7 +29,7 @@ export const Render = ({ newData, handleClick, handleChange }) => {
     <td>12 May 2024</td>
   </tr>
 )) : Object.keys(newData).map((item, index) => (
-  <tr key={item}>
+  <tr key={item} >
     <td>{Datamarkup(newData,item,index,handleClick,handleChange)}</td>
     <td>5KB</td>
     <td>13 May 2024</td>
