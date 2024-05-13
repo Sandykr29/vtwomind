@@ -23,7 +23,7 @@ export const Render = ({ newData, handleClick, handleChange }) => {
 </thead>
 <tbody>
   {Array.isArray(newData) ? newData.map((item, index) => (
-  <tr key={index}>
+  <tr key={index} >
     <td>{Datamarkup(newData,item,index,handleClick,handleChange)}</td>
     <td>5KB</td>
     <td>12 May 2024</td>

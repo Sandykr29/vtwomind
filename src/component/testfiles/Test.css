@@ -36,6 +36,7 @@
 
 .bottom-div span{
     margin-left: 5px;
+    color: rgb(63, 59, 59);
 }
 
 .warning-removal >p{
@@ -73,6 +74,9 @@ color: white;
     padding: 8px;
     text-align: left;
   }
+  .container td{
+    color: rgb(63, 59, 59);
+  }
   
   .container th {
     background-color: #f2f2f2; 
@@ -86,4 +90,8 @@ color: white;
 
   tbody tr td:first-child input{
     margin-right: 5px;
+  }
+
+  .table-main-content:hover{
+    background-color: grey;
   }
