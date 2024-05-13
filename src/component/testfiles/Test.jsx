@@ -39,7 +39,7 @@ export const Listing = ({ data }) => {
   };
 
 
-  // function to make breadcurmb 
+  // function to give filtered data through breadcrumb 
   const getDataFromSelected = (data, selected, index) => {
     let newData = data;
     for (let i = 1; i <= index; i++) {
@@ -50,14 +50,14 @@ export const Listing = ({ data }) => {
   };
 
 
-  // logic to check it selected data is an array or obj 
+  // logic to put selected data from main data to selected useState's array
   const handleClick = (item) => {
     if (Array.isArray(newData[item])) {
       setNewData(newData[item]);
-      setSelected((p) => [...p, `> ${item}`]);
+      setSelected((p) => [...p, item]);
     } else if (typeof newData[item] === "object") {
       setNewData(newData[item]);
-      setSelected((p) => [...p, `> ${item}`]);
+      setSelected((p) => [...p,item]);
     }
   };
 
@@ -107,6 +107,10 @@ export const Listing = ({ data }) => {
         ))}
 
       </div>
+      <hr/>
+      <h3>Testing for data path</h3>
+      {/* const result = arr.map(item => item.replace('<', '')).join('/'); */}
+      
     </div>
   );
 };
