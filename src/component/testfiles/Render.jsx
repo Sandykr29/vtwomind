@@ -1,15 +1,9 @@
 import React from 'react';
 
 
-const Stringcheck=(data,value)=>{
-  if(data.value==="String" || data.value==="Number"){
-    {(newData.item=="String" ||newData.item==="Number")?newData.item:item}
-  }
-}
-
 const Datamarkup = (newData, item, index, handleClick, handleChange) => (
   <>
-    <input onChange={(e) => handleChange(e, item)} type="checkbox" name="" id="" />
+    <input onChange={(e) => handleChange(e, (typeof newData[item] === "string" || typeof newData[item] === "number") ? newData[item] : item)} type="checkbox" />
     <label onClick={() => handleClick(item)}>
       {(typeof newData[item] === "string" || typeof newData[item] === "number") ? newData[item] : item}
     </label>
