@@ -18,7 +18,7 @@ To run the project locally, follow these steps:
 
 
 ## Screenshot
-![Breadcrumb Assignment Screenshot](./screenshot.png)
+![Breadcrumb Assignment Screenshot](./public/v2ui-page.png)
 
 ## Site Link
 The assignment is hosted on the following link: [V2Minds Website](https://v2minds.netlify.app/)
