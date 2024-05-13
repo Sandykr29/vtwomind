@@ -101,16 +101,10 @@ export const Listing = ({ data }) => {
         {chosen?.map((item, index) => (
           <div className="bottom-div" key={item}>
             <input  onChange={handlePlay} type="checkbox" value={item}  />
-            <label>{item}</label>
-            
+            <label>{selected.join("/")}/{item}</label>        
           </div>
         ))}
-
-      </div>
-      <hr/>
-      <h3>Testing for data path</h3>
-      {/* const result = arr.map(item => item.replace('<', '')).join('/'); */}
-      
+      </div> 
     </div>
   );
 };
