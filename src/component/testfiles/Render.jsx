@@ -13,16 +13,54 @@ const Datamarkup = (newData, item, index, handleClick, handleChange) => (
 
 export const Render = ({ newData, handleClick, handleChange }) => {
   return (
-    <div className="container">
-      {Array.isArray(newData) ? newData.map((item, index) => (
-        <div key={index}>
-          {Datamarkup(newData,item,index,handleClick,handleChange)}
-        </div>
-      )) : Object.keys(newData).map((item, index) => (
-        <div key={item}>
-          {Datamarkup(newData,item,index,handleClick,handleChange)}
-        </div>
-      ))}
-    </div>
+    <table className="container">
+     <thead>
+  <tr>
+    <th>Folder</th>
+    <th>Size</th>
+    <th>Date</th>
+  </tr>
+</thead>
+<tbody>
+  {Array.isArray(newData) ? newData.map((item, index) => (
+  <tr key={index}>
+    <td>{Datamarkup(newData,item,index,handleClick,handleChange)}</td>
+    <td>5KB</td>
+    <td>12 May 2024</td>
+  </tr>
+)) : Object.keys(newData).map((item, index) => (
+  <tr key={item}>
+    <td>{Datamarkup(newData,item,index,handleClick,handleChange)}</td>
+    <td>5KB</td>
+    <td>13 May 2024</td>
+  </tr>
+))}
+</tbody>
+    </table>
   );
 };
+
+{/* <table>
+<thead>
+  <tr>
+    <th>Folder</th>
+    <th>Size</th>
+    <th>Date</th>
+  </tr>
+</thead>
+<tbody>
+  {Array.isArray(newData) ? newData.map((item, index) => (
+  <tr key={index}>
+    <td>{Datamarkup(newData,item,index,handleClick,handleChange)}</td>
+    <td>5KB</td>
+    <td>12 May 2024</td>
+  </tr>
+)) : Object.keys(newData).map((item, index) => (
+  <tr key={item}>
+    <td>{Datamarkup(newData,item,index,handleClick,handleChange)}</td>
+    <td>5KB</td>
+    <td>13 May 2024</td>
+  </tr>
+))}
+</tbody>
+</table> */}
